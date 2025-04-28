@@ -41,7 +41,6 @@
   }
   .levels__sixth-level {
     position: absolute;
-    background-color: #f700ff;
     height: 10vw;
     width: 10vw;
     top: 19vw;
@@ -68,14 +67,6 @@
   .quiz__building-pc {
     flex-direction: column;
   }
-  /* .build__img {
-    height: 250px;
-  } */
-  /* .cpu-down {
-    position: relative;
-    top: -241px;
-    right: 30px;
-  } */
 }
 @media screen and (max-width: 467px) {
   .my__modal-three {

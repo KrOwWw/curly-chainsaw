@@ -1,0 +1,19 @@
+:root {
+  --first-color-hover-before: #6f85ff;
+  --first-color-correct: #b4b4b4;
+
+  --second-color-hover-before: #6f85ff;
+  --second-color-correct: #b4b4b4;
+
+  --color-incorrect: #b4b4b4;
+  --color-hover: #6f85ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  font-family: sans-serif;
+  background: #3ab54a;
+}

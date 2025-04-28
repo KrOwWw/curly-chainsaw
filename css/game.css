@@ -1,0 +1,75 @@
+.money {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), #97979700);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mini-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mini-game__map {
+  width: 100%;
+}
+.mini-game__levels {
+  height: 0;
+}
+.levels__first-level {
+  position: relative;
+  background-color: aqua;
+  height: 90px;
+  width: 90px;
+  top: -241px;
+  left: 92px;
+}
+
+.levels__second-level {
+  position: relative;
+  background-color: red;
+  height: 90px;
+  width: 90px;
+  top: -379px;
+  right: -314px;
+}
+.levels__third-level {
+  position: relative;
+  background-color: green;
+  height: 90px;
+  width: 90px;
+  top: -675px;
+  left: 296px;
+}
+.levels__fourth-level {
+  position: relative;
+  background-color: #d400ff;
+  height: 90px;
+  width: 90px;
+  top: -744px;
+  left: 38px;
+}
+.levels__fifth-level {
+  position: relative;
+  background-color: #e5ff00;
+  height: 90px;
+  width: 90px;
+  top: -1062px;
+  left: 34px;
+}
+.levels__sixth-level {
+  position: relative;
+  background-color: #f700ff;
+  height: 90px;
+  width: 90px;
+  top: -1182px;
+  left: 368px;
+}
