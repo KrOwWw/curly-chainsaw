@@ -1,0 +1,89 @@
+@media screen and (max-width: 1055px) {
+  .my__modal-three {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 895px) {
+  .levels__first-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 73vw;
+    left: 10vw;
+  }
+  .levels__second-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 68vw;
+    right: 55vw;
+  }
+  .levels__third-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 45vw;
+    left: 33vw;
+  }
+  .levels__fourth-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 47vw;
+    left: 4vw;
+  }
+  .levels__fifth-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 22vw;
+    left: 4vw;
+  }
+  .levels__sixth-level {
+    position: absolute;
+    background-color: #f700ff;
+    height: 10vw;
+    width: 10vw;
+    top: 19vw;
+    left: 41vw;
+  }
+  .final-level {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: 9vw;
+    left: 63vw;
+  }
+  .mobile {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .my__modal-final {
+    width: 100vw;
+  }
+  .quiz__building-pc {
+    flex-direction: column;
+  }
+  /* .build__img {
+    height: 250px;
+  } */
+  /* .cpu-down {
+    position: relative;
+    top: -241px;
+    right: 30px;
+  } */
+}
+@media screen and (max-width: 467px) {
+  .my__modal-three {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 393px) {
+  .people__img {
+    width: 100px;
+  }
+}

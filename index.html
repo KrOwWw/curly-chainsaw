@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="css/hystmodal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <section class="mini-game">
+      <div class="mini-game__container">
+        <img
+          class="mini-game__map"
+          src="img/map.jpg"
+          alt="Картинка с игрой"
+        />
+        <div class="mini-game__levels">
+          <!-- VIDEO -->
+          <div
+            class="levels__first-level"
+            data-hystmodal="#myModal"
+          ></div>
+          <!-- QUESTION -->
+          <div
+            class="levels__second-level"
+            data-hystmodal="#myModalTwo"
+          ></div>
+          <div
+            class="levels__third-level"
+            data-hystmodal="#myModalThree"
+          ></div>
+          <!-- DRAG N DROP QUESTS -->
+          <div
+            class="levels__fourth-level"
+            data-hystmodal="#myModalFourth"
+          ></div>
+          <div
+            class="levels__fifth-level"
+            data-hystmodal="#myModalFifth"
+          ></div>
+          <div
+            class="levels__sixth-level"
+            data-hystmodal="#myModalSixth"
+          ></div>
+          <!-- FINAL QUEST -->
+          <div
+            class="final-level"
+            data-hystmodal="#myModalFinal"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALS BEGIN -->
+
+    <div
+      class="hystmodal"
+      id="myModal"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close paused__video"
+          >
+            Закрыть
+          </button>
+          <div class="modal__video">
+            <video
+              class="video"
+              width="320"
+              height="240"
+              controls
+            >
+              <source
+                src="video/progr.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalTwo"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <div class="quiz">
+            <h1 class="quiz__question">
+              1. Что это за объект, который содержит набор инструкций для
+              компьютера, чтобы выполнить определенные задачи?
+            </h1>
+            <div class="quiz__answers">
+              <div
+                class="answers first-answers first-incorrect"
+                id="doc"
+              >
+                Документ
+              </div>
+              <div
+                class="answers first-answers correct"
+                id="firstCorrect"
+              >
+                Программа
+              </div>
+              <div
+                class="answers first-answers first-incorrect"
+                id="img"
+              >
+                Изображение
+              </div>
+              <div
+                class="answers first-answers first-incorrect"
+                id="audio"
+              >
+                Аудиофайл
+              </div>
+            </div>
+            <div
+              id="firstResult"
+              class="result"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalThree"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <h1 class="second__attention">Завершите предыдущее задание</h1>
+          <div class="quiz second__quiz hidden">
+            <h1 class="quiz__question">
+              2. Как называется набор команд, который помогает компьютеру
+              выполнять задачи, такие как обработка текста или создание
+              изображений?
+            </h1>
+            <div class="quiz__answers">
+              <div
+                class="answers second-answers second-incorrect"
+                id="manual"
+              >
+                Инструкция
+              </div>
+              <div
+                class="answers second-answers correct"
+                id="secondCorrect"
+              >
+                Программное обеспечение
+              </div>
+              <div
+                class="answers second-answers second-incorrect"
+                id="guide"
+              >
+                Руководство
+              </div>
+              <div
+                class="answers second-answers second-incorrect"
+                id="setRules"
+              >
+                Набор правил
+              </div>
+            </div>
+            <div
+              id="secondResult"
+              class="result"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalFourth"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window my__modal-fourth"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <h1 class="third__attention">Завершите предыдущее задание</h1>
+          <div class="quiz third__quiz hidden">
+            <h1 class="quiz__question">3. Перетащите элементы</h1>
+            <div
+              id="fourthResult"
+              class="result"
+            ></div>
+            <div class="quiz__blocks">
+              <div class="blocks__input-output">
+                <div class="blocks__input column"></div>
+                <div class="blocks__output column"></div>
+              </div>
+              <div class="blocks__devices">
+                <div
+                  class="device printer"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/printer.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device microphone"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/microphone.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device scanner"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/scanner.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device gamepad"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/gamepad.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device acoustics"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/acoustics.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device headphones"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/headphones.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device mouse"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/mouse.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="device screen"
+                  draggable="true"
+                >
+                  <img
+                    class="device__img"
+                    src="./img/fourth-level/screen.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="buttons fourth__check">Проверить</button>
+            <div
+              id="fourthResult"
+              class="result"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalFifth"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window my__modal-fifth"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <h1 class="fourth__attention">Завершите предыдущее задание</h1>
+          <div class="quiz fourth__quiz hidden">
+            <h1 class="quiz__question">4. Перетащите элементы</h1>
+            <div
+              id="fifthResult"
+              class="result"
+            ></div>
+            <div class="quiz__blocks">
+              <div class="blocks__peoples">
+                <div class="people durov">
+                  <img
+                    class="people__img"
+                    draggable="false"
+                    src="./img/fifth-level/durov.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="people gates">
+                  <img
+                    class="people__img"
+                    draggable="false"
+                    src="./img/fifth-level/gates.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="people zuckerberg">
+                  <img
+                    class="people__img"
+                    draggable="false"
+                    src="./img/fifth-level/zuckerberg.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="people jobs">
+                  <img
+                    class="people__img"
+                    draggable="false"
+                    src="./img/fifth-level/jobs.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="blocks__projects">
+                <div
+                  class="project apple"
+                  draggable="true"
+                >
+                  Apple
+                </div>
+                <div
+                  class="project facebook"
+                  draggable="true"
+                >
+                  Facebook
+                </div>
+                <div
+                  class="project telegram"
+                  draggable="true"
+                >
+                  Telegram
+                </div>
+                <div
+                  class="project microsoft"
+                  draggable="true"
+                >
+                  Microsoft
+                </div>
+              </div>
+            </div>
+            <button class="buttons fifth__check">Проверить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalSixth"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window my__modal-sixth"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <h1 class="fifth__attention">Завершите предыдущее задание</h1>
+          <div class="quiz fifth__quiz hidden">
+            <h1 class="quiz__question">5. Шифр цезаря</h1>
+            <div class="quiz__alphabet">
+              <span>Расшифруйте слово "eqfgs" (сдвиг вправо на 3)</span>
+              <span>Пишите маленькими буквами</span>
+              <img
+                class="quiz__img"
+                src="./img/sixth-level/aphabet.jpg"
+                alt="aphabet"
+              />
+              <input
+                name="user-input"
+                type="text"
+                class="quiz__input"
+              />
+              <br />
+              <button class="buttons sixth__check">Проверить</button>
+            </div>
+            <div
+              id="sixthResult"
+              class="result"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hystmodal"
+      id="myModalFinal"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window my__modal-final"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <h1 class="final__attention">Завершите предыдущее задание</h1>
+          <div class="quiz final__quiz hidden">
+            <h1 class="quiz__question">6. Соберите компьютер</h1>
+            <div class="quiz__building-pc hidden">
+              <div class="build">
+                <img
+                  class="build__img work"
+                  src="./img/final-level/build/off-monitor.jpg"
+                  alt=""
+                  draggable="false"
+                />
+                <img
+                  class="build__img no-work hidden"
+                  src="./img/final-level/build/on-monitor.png"
+                  alt=""
+                  draggable="false"
+                />
+                <div class="build-pc">
+                  <div class="components-places">
+                    <div class="cpu-down component-down"></div>
+                    <div class="ram-down component-down"></div>
+                    <div class="gpu-down component-down"></div>
+                    <div class="rom-down component-down"></div>
+                    <div class="power-unit-down"></div>
+                  </div>
+                  <img
+                    class="build__img"
+                    src="./img/final-level/build/PC.jpg"
+                    alt=""
+                    draggable="false"
+                  />
+                </div>
+              </div>
+              <button class="start-pc mobile check">Проверить</button>
+              <div class="bought-components">
+                <img
+                  class="component__img component__img-cpu hidden"
+                  src="./img/final-level/bought-components/cpu.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-ram hidden"
+                  src="./img/final-level/bought-components/ram.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-gpu hidden"
+                  src="./img/final-level/bought-components/gpu.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-hdd component__img-rom hidden"
+                  src="./img/final-level/bought-components/hdd.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-ssd component__img-rom hidden"
+                  src="./img/final-level/bought-components/ssd.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-samsung component__img-rom hidden"
+                  src="./img/final-level/rom/ssdsams.png"
+                  alt=""
+                />
+                <img
+                  class="component__img component__img-power-unit hidden"
+                  src="./img/final-level/bought-components/power-unit.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="no-components">У вас пока нет комплетующих</div>
+            <button class="open-shop buttons">Магазин</button>
+            <button class="reset buttons">Отменить покупки</button>
+            <button class="start-pc pc buttons">Проверить</button>
+            <div class="shop hidden">
+              <div class="shop__money-number"></div>
+              <div class="shop__cpu block-components">
+                <div class="cpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/cpu/low-cpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="cpu__title">Intel Core i5 10400F</div>
+                      <div class="cpu__price">9000</div>
+                    </div>
+                  </div>
+                  <button class="cpu__pay pay pay-10400">Купить</button>
+                </div>
+                <div class="cpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/cpu/medium-cpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="cpu__title">Intel Core i5 11400F</div>
+                      <div class="cpu__price">11500</div>
+                    </div>
+                  </div>
+                  <button class="cpu__pay pay pay-11400">Купить</button>
+                </div>
+                <div class="cpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/cpu/high-cpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="cpu__title">Intel Core i5-10600KF</div>
+                      <div class="cpu__price">12500</div>
+                    </div>
+                  </div>
+                  <button class="cpu__pay pay pay-10600">Купить</button>
+                </div>
+              </div>
+              <div class="shop__ram block-components">
+                <div class="ram component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/ram/ozu1.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="ram__title">HyperX Fury 8гб</div>
+                    <div class="ram__price">2000</div>
+                  </div>
+                  <button class="ram__pay pay pay-8gb">Купить</button>
+                </div>
+                <div class="ram component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/ram/ozu1.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="ram__title">HyperX Fury 16гб</div>
+                    <div class="ram__price">3000</div>
+                  </div>
+                  <button class="ram__pay pay pay-16gb">Купить</button>
+                </div>
+                <div class="ram component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/ram/ozu1.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="ram__title">HyperX Fury 32гб</div>
+                    <div class="ram__price">5000</div>
+                  </div>
+                  <button class="ram__pay pay pay-32gb">Купить</button>
+                </div>
+              </div>
+              <div class="shop__power-unit block-components">
+                <div class="power-unit component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/power-unit/low-power-unit.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="power-unit__title">IWONGOU 500W</div>
+                      <div class="power-unit__price">2000</div>
+                    </div>
+                  </div>
+                  <button class="power-unit__pay pay pay-iwongou">
+                    Купить
+                  </button>
+                </div>
+                <div class="power-unit component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/power-unit/medium-power-unit.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="power-unit__title">Deepcool 750W</div>
+                      <div class="power-unit__price">5000</div>
+                    </div>
+                  </div>
+                  <button class="power-unit__pay pay pay-deepcool">
+                    Купить
+                  </button>
+                </div>
+                <div class="power-unit component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/power-unit/high-power-unit.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="power-unit__title">PCCOOLER 1000W</div>
+                      <div class="power-unit__price">10000</div>
+                    </div>
+                  </div>
+                  <button class="power-unit__pay pay pay-pccooler">
+                    Купить
+                  </button>
+                </div>
+              </div>
+              <div class="shop__gpu block-components">
+                <div class="gpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/gpu/low-gpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="gpu__title">RTX 2060 SUPER</div>
+                      <div class="gpu__price">26000</div>
+                    </div>
+                  </div>
+                  <button class="gpu__pay pay pay-2060">Купить</button>
+                </div>
+                <div class="gpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/gpu/medium-gpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="gpu__title">RTX 3060</div>
+                      <div class="gpu__price">38000</div>
+                    </div>
+                  </div>
+                  <button class="gpu__pay pay pay-3060">Купить</button>
+                </div>
+                <div class="gpu component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/gpu/high-gpu.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="gpu__title">RTX 4060 Ti</div>
+                      <div class="gpu__price">63000</div>
+                    </div>
+                  </div>
+                  <button class="gpu__pay pay pay-4060">Купить</button>
+                </div>
+              </div>
+              <div class="shop__rom block-components">
+                <div class="rom component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/rom/hdd.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="rom__title">HDD</div>
+                      <div class="rom__price">3000</div>
+                    </div>
+                  </div>
+                  <button class="rom__pay pay pay-hdd">Купить</button>
+                </div>
+                <div class="rom component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/rom/ssd.png"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="rom__title">SSD</div>
+                      <div class="rom__price">5000</div>
+                    </div>
+                  </div>
+                  <button class="rom__pay pay pay-ssd">Купить</button>
+                </div>
+                <div class="rom component">
+                  <div class="shop__info">
+                    <img
+                      class="shop__img"
+                      src="./img/final-level/rom/samsMag.jpg"
+                      alt=""
+                      draggable="false"
+                    />
+                    <div class="shop__text">
+                      <div class="rom__title">SSD</div>
+                      <div class="rom__price">9000</div>
+                    </div>
+                  </div>
+                  <button class="rom__pay pay pay-samsung">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS END -->
+
+    <!-- FORM BEGIN -->
+
+    <div
+      class="hystmodal"
+      id="testModal"
+      aria-hidden="true"
+    >
+      <div class="hystmodal__wrap">
+        <div
+          class="hystmodal__window my__modal-sixth"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            data-hystclose
+            class="hystmodal__close"
+          >
+            Закрыть
+          </button>
+          <form
+            action="#"
+            class="form"
+          >
+            <h1 class="form__title">Войдите, чтобы сохранить результат</h1>
+            <div class="text-field text-field_floating-3">
+              <input
+                class="text-field__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder=""
+              />
+              <label
+                class="text-field__label"
+                for="email"
+                >Email</label
+              >
+            </div>
+            <div class="text-field text-field_floating-3">
+              <input
+                class="text-field__input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder=""
+              />
+              <label
+                class="text-field__label"
+                for="password"
+                >Password</label
+              >
+            </div>
+            <button
+              class="form__button"
+              type="submit"
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM END -->
+
+    <!-- ASIDE GUIDE BEGIN -->
+
+    <div class="guide__wrapper">
+      <button class="guide__close"></button>
+      <p class="guide-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+        asperiores eius harum fuga placeat, voluptas nobis, cum repudiandae
+        voluptatibus voluptate aperiam pariatur natus debitis architecto quod?
+        Nostrum, commodi, quam modi maiores natus inventore fugiat repellendus
+        recusandae corrupti quis ducimus nemo repudiandae sed aliquid minima
+        aliquam expedita cupiditate eaque illo saepe a cum veritatis dicta odit?
+        Dolore quidem officiis quasi. Velit quae non at iure consectetur, cumque
+        vel necessitatibus amet ducimus nostrum quis atque enim nihil qui.
+        Reiciendis velit quam blanditiis eius nobis. Fugiat asperiores, adipisci
+        ut corrupti dignissimos explicabo alias ducimus eligendi omnis quia
+        expedita vero, quod hic blanditiis cum.
+      </p>
+    </div>
+
+    <!-- ASIDE GUIDE END -->
+
+    <div class="money">
+      <div class="money__text">Ваш баланс:</div>
+      <span class="money__number"> </span>
+    </div>
+    <div class="guide-open">Справка</div>
+
+    <script src="js/hystmodal.min.js"></script>
+    <script
+      src="js/drag-drop-touch.esm.min.js?autoload"
+      type="module"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
