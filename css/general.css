@@ -17,3 +17,6 @@
   font-family: sans-serif;
   background: #3ab54a;
 }
+.hidden {
+  display: none !important;
+}

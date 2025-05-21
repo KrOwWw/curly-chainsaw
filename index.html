@@ -809,7 +809,7 @@
 
     <div
       class="hystmodal"
-      id="testModal"
+      id="formModal"
       aria-hidden="true"
     >
       <div class="hystmodal__wrap">
@@ -829,6 +829,21 @@
             class="form"
           >
             <h1 class="form__title">Войдите, чтобы сохранить результат</h1>
+            <div class="text-field text-field_floating-3">
+              <input
+                class="text-field__input"
+                type="name"
+                id="name"
+                name="name"
+                placeholder=""
+                required
+              />
+              <label
+                class="text-field__label"
+                for="name"
+                >Имя</label
+              >
+            </div>
             <div class="text-field text-field_floating-3">
               <input
                 class="text-field__input"
@@ -854,7 +869,7 @@
               <label
                 class="text-field__label"
                 for="password"
-                >Password</label
+                >Пароль</label
               >
             </div>
             <button
@@ -906,6 +921,13 @@
         />
       </svg>
     </div>
+
+    <button
+      class="form-open buttons hidden"
+      data-hystmodal="#formModal"
+    >
+      Сохранить результат
+    </button>
 
     <script src="js/hystmodal.min.js"></script>
     <script

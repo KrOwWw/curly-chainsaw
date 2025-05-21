@@ -2,7 +2,6 @@ const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
   // настройки (не обязательно), см. API
 });
-myModal.open("#testModal");
 
 const root = document.querySelector(":root");
 let userScore = 0;
@@ -300,13 +299,10 @@ const startPcMobile = document.querySelector(".mobile");
 const reset = document.querySelector(".reset");
 const shop = document.querySelector(".shop");
 
-const form = document.querySelector(".form__wrapper");
-// const openForm = document.querySelector(".form__wrapper");
-const closeForm = document.querySelector(".form__close");
-
 const guide = document.querySelector(".guide__wrapper");
 const openGuide = document.querySelector(".guide-open");
 const closeGuide = document.querySelector(".guide__close");
+const openForm = document.querySelector(".form-open");
 
 let moneySpent = 0;
 let opened = false;
@@ -743,7 +739,7 @@ startPc.addEventListener("click", () => {
     ) {
       workPc.classList.add("hidden");
       noWorkPc.classList.remove("hidden");
-      openForm.classList.add("active");
+      openForm.classList.remove("hidden");
     }
   }
 });

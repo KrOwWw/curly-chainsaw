@@ -170,3 +170,12 @@
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
+
+.form-open {
+  position: fixed;
+  top: 250px;
+  right: 0;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
