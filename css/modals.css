@@ -200,7 +200,7 @@
 }
 .final-level {
   position: relative;
-  background-color: #00ff40;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -1358px;

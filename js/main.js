@@ -808,3 +808,6 @@ closeGuide.addEventListener("click", () => {
 openGuide.addEventListener("click", () => {
   guide.classList.add("active");
 });
+
+const sendResult = document.querySelector(".send__result");
+sendResult.value = userMoney.innerText;

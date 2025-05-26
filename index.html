@@ -825,14 +825,15 @@
             Закрыть
           </button>
           <form
-            action="#"
+            action="actions.php"
             class="form"
+            method="POST"
           >
             <h1 class="form__title">Войдите, чтобы сохранить результат</h1>
             <div class="text-field text-field_floating-3">
               <input
                 class="text-field__input"
-                type="name"
+                type="text"
                 id="name"
                 name="name"
                 placeholder=""
@@ -851,6 +852,7 @@
                 id="email"
                 name="email"
                 placeholder=""
+                required
               />
               <label
                 class="text-field__label"
@@ -865,11 +867,28 @@
                 id="password"
                 name="password"
                 placeholder=""
+                minlength="8"
+                required
               />
               <label
                 class="text-field__label"
                 for="password"
                 >Пароль</label
+              >
+            </div>
+            <div class="text-field text-field_floating-3">
+              <input
+                class="text-field__input send__result"
+                type="number"
+                id="result"
+                name="result"
+                placeholder=""
+                readonly 
+              />
+              <label
+                class="text-field__label"
+                for="result"
+                >Результат</label
               >
             </div>
             <button
@@ -890,17 +909,9 @@
     <div class="guide__wrapper">
       <button class="guide__close"></button>
       <p class="guide-text">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
-        asperiores eius harum fuga placeat, voluptas nobis, cum repudiandae
-        voluptatibus voluptate aperiam pariatur natus debitis architecto quod?
-        Nostrum, commodi, quam modi maiores natus inventore fugiat repellendus
-        recusandae corrupti quis ducimus nemo repudiandae sed aliquid minima
-        aliquam expedita cupiditate eaque illo saepe a cum veritatis dicta odit?
-        Dolore quidem officiis quasi. Velit quae non at iure consectetur, cumque
-        vel necessitatibus amet ducimus nostrum quis atque enim nihil qui.
-        Reiciendis velit quam blanditiis eius nobis. Fugiat asperiores, adipisci
-        ut corrupti dignissimos explicabo alias ducimus eligendi omnis quia
-        expedita vero, quod hic blanditiis cum.
+        На сайте есть кнопки. Кнопки на каждой цифре из всей картинки. 
+        При нажатии на цифры открываются задания связанные с профессиями айтишника. Стоит учесть, что задания пропустить нельзя. Например, если открыть последнее задание, то появится окно с просьбой выполнить предыдущее. Это сделано чтобы пользователи не могли отправить результаты, не проходя весь квест.
+        Когда пользователь успешно выполнит финальное задание, появится синяя кнопка "сохранить результаты". Нажимая на нее, откроется модальное окно с формой. В форме есть поля "Имя", "Почта", "Пароль", "Результат". При отправке, данные сохраняются в базу. 
       </p>
     </div>
 

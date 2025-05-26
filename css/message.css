@@ -1,0 +1,10 @@
+@import url("./general.css");
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message {
+  padding-top: 30vh;
+}

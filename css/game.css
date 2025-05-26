@@ -1,3 +1,7 @@
+.body {
+  background: #3ab54a;
+}
+
 .money {
   display: flex;
   flex-direction: column;
@@ -26,7 +30,7 @@
 }
 .levels__first-level {
   position: relative;
-  background-color: aqua;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -241px;
@@ -35,7 +39,7 @@
 
 .levels__second-level {
   position: relative;
-  background-color: red;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -379px;
@@ -43,7 +47,7 @@
 }
 .levels__third-level {
   position: relative;
-  background-color: green;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -675px;
@@ -51,7 +55,7 @@
 }
 .levels__fourth-level {
   position: relative;
-  background-color: #d400ff;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -744px;
@@ -59,7 +63,7 @@
 }
 .levels__fifth-level {
   position: relative;
-  background-color: #e5ff00;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -1062px;
@@ -67,7 +71,7 @@
 }
 .levels__sixth-level {
   position: relative;
-  background-color: #f700ff;
+  cursor: pointer;
   height: 90px;
   width: 90px;
   top: -1182px;
